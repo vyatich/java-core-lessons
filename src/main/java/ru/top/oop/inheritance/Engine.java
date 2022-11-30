@@ -1,4 +1,4 @@
-package ru.top.oop;
+package ru.top.oop.inheritance;
 
 public class Engine {
 
