@@ -1,4 +1,4 @@
-package ru.top.practic.concurrent;
+package ru.top.practic.concurrent.practice1;
 
 import java.util.Comparator;
 

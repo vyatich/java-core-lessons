@@ -1,10 +1,9 @@
-package ru.top.practic.concurrent;
+package ru.top.practic.concurrent.practice1;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 //ользователь с клавиатуры вводит значения в массив. После чего запускаются две потока. Первый поток
 //находит максимум в массиве. Второй поток находит минимум в массиве. Результаты вычислений возвращаются
