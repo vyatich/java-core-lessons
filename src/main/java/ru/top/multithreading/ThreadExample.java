@@ -4,13 +4,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadExample {
 
-    static AtomicInteger count = new AtomicInteger(0);
+    static Integer count = 0;
 
     public static void main(String[] args) throws InterruptedException {
         MyThread thread = new MyThread();
-        thread.setPriority(Thread.MAX_PRIORITY);
         thread.start();
-        thread.interrupt();
 
         MyThread thread2 = new MyThread();
         thread2.start();

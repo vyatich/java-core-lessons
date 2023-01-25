@@ -22,7 +22,7 @@ public class Main {
                 .map(Integer::valueOf)
                 .toList();
 
-        CalculateThread sumTask = new CalculateThread(numbers -> numbers.stream().mapToInt(n -> n).sum());
+        CalculateTask sumTask = new CalculateTask(numbers -> numbers.stream().mapToInt(n -> n).sum());
         Thread sumThread = new Thread(sumTask);
         sumThread.start();
         sumThread.join();
@@ -30,7 +30,7 @@ public class Main {
         Integer sum = sumTask.getResult().intValue();
         System.out.println(sum);
 
-        CalculateThread avgTask = new CalculateThread(numbers -> numbers.stream().mapToInt(n -> n).average().getAsDouble());
+        CalculateTask avgTask = new CalculateTask(numbers -> numbers.stream().mapToInt(n -> n).average().getAsDouble());
         Thread avgThread = new Thread(avgTask);
         avgThread.start();
         avgThread.join();
