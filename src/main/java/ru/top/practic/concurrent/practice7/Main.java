@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Main {
 
-    public static String currentLine = "sfsdf";
+    public static String currentLine;
 
     public static void main(String[] args) throws InterruptedException {
         File file = new File("D:\\JProjects\\java214\\java-core\\example_directory\\run\\skip\\java\\"
@@ -13,6 +13,7 @@ public class Main {
         Object lock = new Object();
 
         WriterThread writerThread = new WriterThread(lock);
+        writerThread.setDaemon(true);
         writerThread.start();
 
         ReaderThread readerThread = new ReaderThread(lock, file);

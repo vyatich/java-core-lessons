@@ -15,8 +15,7 @@ public class ReaderThread extends Thread {
     @Override
     public void run() {
         synchronized (lock) {
-            try {
-                BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
                 String line;
                 while ((line = bufferedReader.readLine()) != null) {
                     Main.currentLine = line;

@@ -25,7 +25,7 @@ public class WriterThread extends Thread {
 
         synchronized (lock) {
             try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
-                while (!Main.currentLine.equals("")) {
+                while (true) {
                     lock.wait();
                     bufferedWriter.write(Main.currentLine + "\n");
                     bufferedWriter.flush();
