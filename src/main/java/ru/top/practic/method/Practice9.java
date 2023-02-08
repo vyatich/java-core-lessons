@@ -14,7 +14,7 @@ public class Practice9 {
         System.out.println(Arrays.toString(numbers));
     }
 
-    private static void sort(Integer[] array, boolean isAsc) {
+    public static void sort(Integer[] array, boolean isAsc) {
         if (isAsc) {
             Arrays.sort(array);
         } else {
