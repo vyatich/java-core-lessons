@@ -1,6 +1,7 @@
 package ru.top.practic.method;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class Practice12Test {
 
     @Test
+    @RepeatedTest(1000)
     void getFactorial() {
         int actual = Practice12.getFactorial(5);
 
