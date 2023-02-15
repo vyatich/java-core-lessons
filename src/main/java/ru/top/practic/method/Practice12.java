@@ -1,11 +1,15 @@
 package ru.top.practic.method;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Practice12 {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 10, 5};
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        System.out.println(getFactorial(number));
         System.out.println(Arrays.toString(getFactorialArray(numbers)));
     }
 

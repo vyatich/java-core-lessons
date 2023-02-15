@@ -1,12 +1,26 @@
 package ru.top.method;
 
+import java.util.List;
+
 public class Recursive {
 
-    public static void main(String[] args) {
-        System.out.println(getFactorial(5));//1*2*3*4*5 = 120
+    private final DigitFileReader digitFileReader;
+
+    public Recursive(DigitFileReader digitFileReader) {
+        this.digitFileReader = digitFileReader;
     }
 
-    public static int getFactorial(int number) {
+    public List<Integer> getFactorialByFile() {
+        List<Integer> digits = digitFileReader.getDigits();
+        return digits.stream()
+                .map(this::getFactorial)
+                .toList();
+    }
+
+    public int getFactorial(int number) {
+        if (number <= 0) {
+            throw new RuntimeException(String.format("Факториал %s не существует", number));
+        }
         if (number == 1 || number == 2) {
             return number;
         } else {
