@@ -24,7 +24,7 @@ public class Phone extends Protytype implements Cloneable {
     }
 
     @Override
-    public Protytype clone() {
+    public Protytype clonePrototype() {
         Phone phone = new Phone();
         phone.setName(this.getName());
         phone.setModel(this.getModel());
@@ -41,5 +41,10 @@ public class Phone extends Protytype implements Cloneable {
                 ", description='" + description + '\'' +
                 '}';
         return sb;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

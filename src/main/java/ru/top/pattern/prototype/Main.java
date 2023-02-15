@@ -25,7 +25,12 @@ public class Main {
 
         System.out.println(phone);
 
-        Phone clone = (Phone) phone.clone();
+        Phone clone = null;
+        try {
+            clone = (Phone) phone.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println(clone);
     }

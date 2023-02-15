@@ -5,7 +5,7 @@ public abstract class Protytype {
     protected String name;
     protected String description;
 
-    public abstract Protytype clone();
+    public abstract Protytype clonePrototype();
 
     public String getName() {
         return name;
