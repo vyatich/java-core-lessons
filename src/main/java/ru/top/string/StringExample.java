@@ -8,7 +8,7 @@ public class StringExample {
 
     public static void main(String[] args) {
         String str = "Write once, run anywhere";
-        String[] split = str.split("[A-z]");
+        String[] split = str.split("[A-z]", 2);
         System.out.println(Arrays.toString(split));
 
         String phone = "+79023423416";
